@@ -102,20 +102,20 @@ void Game::draw() {
     const int render_rad = 6;
     for (int i = 0; i < SCREEN_HEIGHT / CELL_SIZE; i++) {
         for (int j = 0; j < SCREEN_WIDTH / CELL_SIZE; j++) {
-            if (i >= int(SCREEN_HEIGHT) / CELL_SIZE / 2 - render_rad &&
-                i <= int(SCREEN_HEIGHT) / CELL_SIZE / 2 + render_rad &&
-                j >= int(SCREEN_WIDTH) / CELL_SIZE / 2 - render_rad &&
-                j <= int(SCREEN_WIDTH) / CELL_SIZE / 2 + render_rad) {
+            if (i >= int(SCREEN_HEIGHT) / int(CELL_SIZE) / 2 - render_rad &&
+                i <= int(SCREEN_HEIGHT) / int(CELL_SIZE) / 2 + render_rad &&
+                j >= int(SCREEN_WIDTH) / int(CELL_SIZE) / 2 - render_rad &&
+                j <= int(SCREEN_WIDTH) / int(CELL_SIZE) / 2 + render_rad) {
 
-                int   off_x = -int(SCREEN_WIDTH) / CELL_SIZE / 2 + j;
-                int   off_y = -int(SCREEN_HEIGHT) / CELL_SIZE / 2 + i;
+                int   off_x = -int(SCREEN_WIDTH) / int(CELL_SIZE) / 2 + j;
+                int   off_y = -int(SCREEN_HEIGHT) / int(CELL_SIZE) / 2 + i;
                 Point p(player.playerX() + off_x, player.playerY() + off_y);
 
                 try {
                     if (isFilledCell(p)) {
                         auto cell = map[mapInd(p)];
-                        int  tmp  = SCREEN_WIDTH / CELL_SIZE / 2;
-                        cell->setPosition(j * CELL_SIZE, i * CELL_SIZE); // On screen coords
+                        int  tmp  = SCREEN_WIDTH / 64 / 2;
+                        cell->setPosition(j * int(CELL_SIZE), i * int(CELL_SIZE)); // On screen coords
                         window.draw(*cell);
                     }
                 } catch (std::out_of_range) {
