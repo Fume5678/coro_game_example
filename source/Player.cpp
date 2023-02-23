@@ -10,8 +10,8 @@ void Player::init() {
     }
     setTexture(texture);
 
-    setPosition(SCREEN_WIDTH / 64 / 2 * 64.0f + 10,
-                SCREEN_HEIGHT / 64 / 2 * 64.0f - 10);
+    setPosition(SCREEN_WIDTH / CELL_SIZE / 2 * float(CELL_SIZE) + 10,
+                SCREEN_HEIGHT / CELL_SIZE / 2 * float(CELL_SIZE) - 10);
 }
 
 void Player::handleEvent(sf::Event& event) {
