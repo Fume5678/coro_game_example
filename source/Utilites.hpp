@@ -13,6 +13,7 @@ const std::string RESOURCE_PATH = _RESOURCE_PATH;
 const unsigned SCREEN_WIDTH  = 800;
 const unsigned SCREEN_HEIGHT = 600;
 const unsigned MAP_SIZE      = 256;
+const unsigned CELL_SIZE     = 64;
 
 struct Point {
     int x;

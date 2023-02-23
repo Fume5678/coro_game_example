@@ -63,7 +63,7 @@ void Game::init_map() {
 
     auto tmp           = cell_generator();
     cell_gen           = std::move(tmp);
-    const int init_rad = 3;
+    const int init_rad = 0;
     loadChunk({player.playerX(), player.playerY()}, init_rad);
 }
 

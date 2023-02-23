@@ -39,9 +39,9 @@ public:
 
     std::shared_ptr<Cell> next_cell();
 
-    handle_type handle;
 
 private:
+    handle_type handle;
 };
 
 #endif // CELLGENERATOR_H
