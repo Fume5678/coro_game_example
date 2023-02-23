@@ -2,8 +2,9 @@
 
 This is the coro_game_map project.
 
-Cell map generation with using C++ 20 coroutines.
+Tiles map generation with using C++ 20 coroutines.
 
+Game example using SFML library and -ltbb for execution policy
 
-Press E to create tiles around
+_Press E to create tiles around_
 ![img.png](img.png)

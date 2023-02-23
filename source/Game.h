@@ -2,7 +2,6 @@
 #define GAME_H
 
 #include <SFML/Graphics/RenderWindow.hpp>
-#include <cppcoro/async_generator.hpp>
 #include <vector>
 #include <memory>
 

@@ -26,13 +26,6 @@ add_executable(coro_game_map_exe
     source/Game.cpp
 )
 
-# ---- Coro package ----
-find_package(cppcoro REQUIRED)
-
-if(cppcoro_FOUND)
-    target_link_libraries(coro_game_map_exe PRIVATE cppcoro::cppcoro)
-endif()
-
 # ---- SFML ----
 find_package(SFML REQUIRED system window graphics network audio)
 
